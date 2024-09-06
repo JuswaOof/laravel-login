@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::post('roles/store', ['as'=>'role.store', 'uses' => 'HomeController@role_store']);
+
+Route::post('roles/store', 'HomeController@role_store')->name('role.store');
+
+// Route::delete('roles/delete/{id}', 'HomeController@role_delete')->name('role.delete');
+
+Route::delete('roles/delete/{id}', 'HomeController@role_delete')->name('role.delete');
+
+Route::post('roles/edit', 'HomeController@role_edit')->name('role.edit');

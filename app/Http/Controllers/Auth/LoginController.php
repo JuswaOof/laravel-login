@@ -38,13 +38,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function loginAs($user){
-        if($user->hasRole('SuperAdmin')){
-            return view('superAdmin');
-        }elseif($user->hasRole('Admin')){
-            return view('admin');
-        }elseif($user->hasRole('User')){
-            return view('user');
-        }
-    }
+    // public function loginAs($user){
+    //     if($user->hasRole('SuperAdmin')){
+    //         return view('superAdmin');
+    //     }elseif($user->hasRole('Admin')){
+    //         return view('admin');
+    //     }elseif($user->hasRole('User')){
+    //         return view('user');
+    //     }
+    // }
 }
